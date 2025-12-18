@@ -4,3 +4,81 @@
 h1 {
   font-size: 150px;
 }
+
+.material-symbols-outlined {
+  font-variation-settings:
+  'FILL' 0,
+  'wght' 300,
+  'GRAD' 0,
+  'opsz' 48
+}
+
+.material-symbols-outlined.FILL {
+  font-variation-settings:
+  'FILL' 1,
+  'wght' 300,
+  'GRAD' 0,
+  'opsz' 48
+}
+
+// App Header
+.app-header {
+  background: $primary-blue;
+  color: $white;
+  padding: 12px;
+  width: 100%;
+
+  // Search Box
+  .search-box {
+    background: $white;
+    border-radius: 10px;
+    padding: 8px;
+    gap: 6px;
+    width: calc(100% - 52px);
+
+    input {
+      border: none;
+      outline: none;
+    }
+  }
+
+  .search-icon {
+    color: gray;
+    font-size: 30px;
+  }
+
+  .icon-btn {
+    width: 46px;
+    height: 46px;
+    border-radius: 10px;
+    border: 1px solid $white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  // Icon Button
+  .profile-icon span {
+    font-size: 44px;
+  }
+
+  // Category Tabs
+  .category-tabs {
+    overflow-x: auto;
+    white-space: nowrap;
+
+    .category-item {
+      display: inline-flex;
+      flex-direction: column;
+      align-items: center;
+      color: $white;
+      font-size: 12px;
+      margin-right: 16px;
+
+      &.active {
+        border-bottom: 2px solid $white;
+        padding-bottom: 4px;
+      }
+    }
+  }
+}

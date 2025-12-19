@@ -168,10 +168,24 @@ h1 {
   font-variation-settings: "FILL" 1, "wght" 300, "GRAD" 0, "opsz" 48;
 }
 
+body {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  user-select: none;
+}
+
+::selection {
+  background: transparent;
+}
+
+input, textarea {
+  user-select: text;
+}
+
 .app-header {
   background: #1637a5;
   color: #ffffff;
-  padding: 12px;
+  padding-top: 22px;
   width: 100%;
 }
 .app-header .search-box {
@@ -204,6 +218,7 @@ h1 {
 .app-header .category-tabs {
   overflow-x: auto;
   white-space: nowrap;
+  position: relative;
 }
 .app-header .category-tabs .category-item {
   display: inline-flex;
@@ -211,11 +226,24 @@ h1 {
   align-items: center;
   color: #ffffff;
   font-size: 12px;
-  margin-right: 16px;
+  line-height: 1em;
+  width: 100%;
+  padding: 0 10px 6px;
+  gap: 12px;
 }
-.app-header .category-tabs .category-item.active {
-  border-bottom: 2px solid #ffffff;
-  padding-bottom: 4px;
+.app-header .curve-line {
+  --line-width: calc(100% / 5);
+  --position: 0;
+  position: absolute;
+  width: var(--line-width);
+  height: 24px;
+  bottom: 0;
+  left: calc(var(--line-width) * var(--position));
+  border: 1px solid #fff;
+  border-radius: 10px;
+  border: 1px solid #fff;
+  border-radius: 10px 10px 0 0;
+  border-bottom: unset;
 }
 
 /*# sourceMappingURL=main.css.map */

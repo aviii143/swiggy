@@ -21,10 +21,13 @@
         <header class="app-header">
             <!-- ETA & Profile -->
             <div
-                class="d-flex justify-content-between align-items-start mb-2">
+                class="d-flex justify-content-between align-items-start mb-3 px-3">
                 <div>
                     <h4 class="mb-0 fw-bold">16 mins</h4>
-                    <small><span class="fw-600">To Home:</span> A74, Hida Ki Mori, New Indian...</small>
+                    <small class="d-flex align-items-center gap-2">
+                        <span class="fw-600">To Home:</span> A74, Hida Ki Mori... 
+                        <span class="material-symbols-outlined">keyboard_arrow_down</span>
+                    </small>
                 </div>
 
                 <div class="profile-icon">
@@ -33,7 +36,7 @@
             </div>
 
             <!-- Search -->
-            <div class="d-flex align-items-center gap-2 mb-3">
+            <div class="d-flex align-items-center gap-2 mb-3 px-3">
                 <div class="search-box d-flex align-items-center flex-grow-1">
                     <span class="search-icon material-symbols-outlined">search</span>
                     <input type="text" class="w-100"
@@ -47,25 +50,28 @@
             <!-- Categories -->
             <div class="category-tabs d-flex">
                 <div class="category-item active">
-                    <i class="bi bi-basket"></i>
+                    <span class="material-symbols-outlined FILL">local_mall</span>
                     <span>All</span>
                 </div>
                 <div class="category-item">
-                    <i class="bi bi-flower1"></i>
-                    <span>Bhakti</span>
+                    <span class="material-symbols-outlined">nutrition</span>
+                    <span>Fresh</span>
                 </div>
                 <div class="category-item">
-                    <i class="bi bi-tree"></i>
-                    <span>Christmas</span>
+                    <span class="material-symbols-outlined">grocery</span>
+                    <span>Grocery</span>
                 </div>
                 <div class="category-item">
-                    <i class="bi bi-snow"></i>
-                    <span>Winter</span>
+                    <span class="material-symbols-outlined">toys</span>
+                    <span>Kinds</span>
                 </div>
                 <div class="category-item">
-                    <i class="bi bi-heart"></i>
-                    <span>Wedding</span>
+                    <span class="material-symbols-outlined">health_and_beauty</span>
+                    <span>Beauty</span>
                 </div>
+
+                <span class="curve-line"></span>
+
             </div>
         </header>
 

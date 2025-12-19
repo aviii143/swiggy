@@ -21,11 +21,25 @@ h1 {
   'opsz' 48
 }
 
+body {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  user-select: none;
+}
+
+::selection {
+  background: transparent;
+}
+
+input, textarea {
+  user-select: text;
+}
+
 // App Header
 .app-header {
   background: $primary-blue;
   color: $white;
-  padding: 12px;
+  padding-top: 22px;
   width: 100%;
 
   // Search Box
@@ -66,6 +80,7 @@ h1 {
   .category-tabs {
     overflow-x: auto;
     white-space: nowrap;
+    position: relative;
 
     .category-item {
       display: inline-flex;
@@ -73,12 +88,30 @@ h1 {
       align-items: center;
       color: $white;
       font-size: 12px;
-      margin-right: 16px;
+      line-height: 1em;
+      width: 100%;
+      padding: 0 10px 6px;
+      gap: 12px;
 
-      &.active {
-        border-bottom: 2px solid $white;
-        padding-bottom: 4px;
-      }
+      // &.active {
+      //   border-bottom: 2px solid $white;
+      //   padding-bottom: 4px;
+      // }
     }
+  }
+
+  .curve-line {
+      --line-width: calc(100% / 5);
+      --position: 0;
+      position: absolute;
+      width: var(--line-width);
+      height: 24px;
+      bottom: 0;
+      left: calc(var(--line-width) * var(--position));
+      border: 1px solid #fff;
+      border-radius: 10px;
+      border: 1px solid #fff;
+      border-radius: 10px 10px 0 0;
+      border-bottom: unset;
   }
 }
